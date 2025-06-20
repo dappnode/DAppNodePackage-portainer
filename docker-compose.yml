@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  portainer:
+    build:
+      context: .
+      args:
+        - UPSTREAM_VERSION_PORTAINER=2.27.7
+    image: portainer.dnp.dappnode.eth:0.1.0
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    restart: unless-stopped
+volumes:
+  portainer_data: {}
