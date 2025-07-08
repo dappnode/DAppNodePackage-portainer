@@ -8,6 +8,9 @@
   "links": {
     "homepage": "https://your-project-homepage-or-docs.io"
   },
+  "requirements": {
+    "minimumDappnodeVersion": "0.3.2"
+  },
   "upstream": [
     {
       "repo": "portainer/portainer-ce",
