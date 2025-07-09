@@ -6,7 +6,8 @@
   "author": "root",
   "categories": ["Developer tools"],
   "links": {
-    "homepage": "https://your-project-homepage-or-docs.io"
+    "homepage": "https://your-project-homepage-or-docs.io",
+    "ui": "https://portainer.dappnode:9443"
   },
   "requirements": {
     "minimumDappnodeVersion": "0.3.2"
