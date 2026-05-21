@@ -1,31 +1,20 @@
-name: "Main"
+name: Bump upstream version
+
 on:
-  pull_request:
-  push:
-    branches:
-      - "master"
-      - "main"
-      - "v[0-9]+.[0-9]+.[0-9]+"
-    paths-ignore:
-      - "README.md"
+  schedule:
+    - cron: "00 */4 * * *"
+  workflow_dispatch:
 
 jobs:
-  build-test:
+  bump-upstream:
     runs-on: ubuntu-latest
-    name: Build test
-    if: github.event_name != 'push'
     steps:
-      - uses: actions/checkout@v2
-      - run: npx @dappnode/dappnodesdk build --skip_save
-
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-    steps:
-      - uses: actions/checkout@v2
-      - name: Publish
-        run: npx @dappnode/dappnodesdk publish patch --dappnode_team_preset
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - run: npx @dappnode/dappnodesdk github-action bump-upstream
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEVELOPER_ADDRESS: "0xf35960302a07022aba880dffaec2fdd64d5bf1c1"
+          PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
+          PINATA_SECRET_API_KEY: ${{ secrets.PINATA_SECRET_API_KEY }}
