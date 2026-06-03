@@ -14,7 +14,7 @@
   },
   "upstream": [
     {
-      "repo": "portainer/portainer-ce",
+      "repo": "portainer/portainer",
       "version": "v2.27.7",
       "arg": "UPSTREAM_VERSION_PORTAINER"
     }
