@@ -1,6 +1,6 @@
 {
   "name": "portainer.dnp.dappnode.eth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Manage docker containers from Portainer's UI",
   "type": "service",
   "author": "root",
@@ -15,7 +15,7 @@
   "upstream": [
     {
       "repo": "portainer/portainer",
-      "version": "v2.27.7",
+      "version": "2.42.0",
       "arg": "UPSTREAM_VERSION_PORTAINER"
     }
   ],
