@@ -1,23 +1,25 @@
 {
-  "name": "portainer.dnp.dappnode.eth",
-  "version": "0.1.0",
-  "description": "Manage docker containers from Portainer's UI",
-  "type": "service",
   "author": "root",
-  "categories": ["Developer tools"],
+  "categories": [
+    "Developer tools"
+  ],
+  "description": "Manage docker containers from Portainer's UI",
+  "license": "GPL-3.0",
   "links": {
     "homepage": "https://www.portainer.io/",
     "ui": "https://portainer.dappnode:9443"
   },
+  "name": "portainer.dnp.dappnode.eth",
   "requirements": {
     "minimumDappnodeVersion": "0.3.2"
   },
+  "type": "service",
   "upstream": [
     {
+      "arg": "UPSTREAM_VERSION_PORTAINER",
       "repo": "portainer/portainer",
-      "version": "v2.27.7",
-      "arg": "UPSTREAM_VERSION_PORTAINER"
+      "version": "2.39.4"
     }
   ],
-  "license": "GPL-3.0"
+  "version": "0.1.1"
 }
