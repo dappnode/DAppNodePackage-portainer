@@ -18,7 +18,7 @@
     {
       "arg": "UPSTREAM_VERSION_PORTAINER",
       "repo": "portainer/portainer",
-      "version": "2.39.4"
+      "version": "2.39.5"
     }
   ],
   "version": "0.1.1"
