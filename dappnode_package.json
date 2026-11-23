@@ -1,5 +1,11 @@
 {
   "author": "root",
+  "backup": [
+    {
+      "name": "data",
+      "path": "/data"
+    }
+  ],
   "categories": [
     "Developer tools"
   ],
